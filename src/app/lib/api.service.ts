@@ -8,7 +8,7 @@ import { throwError as observableThrowError } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  public host = 'http://localhost:56313/';
+  public host = 'http://localhost:56313';
   constructor(private _http: HttpClient, public router: Router) {}
 
   post(url: string, obj: any) {
@@ -24,11 +24,11 @@ export class ApiService {
           return json;
         })
       )
-      // .pipe(
-      //   catchError((err: Response) => {
-      //     return this.handleError(err);
-      //   })
-      // );
+      .pipe(
+        catchError((err: Response) => {
+          return this.handleError(err);
+        })
+      );
   }
 
   get(url: string) {
@@ -44,14 +44,14 @@ export class ApiService {
           return json;
         })
       )
-      // .pipe(
-      //   catchError((err: Response) => {
-      //     return this.handleError(err);
-      //   })
-      // );
+      .pipe(
+        catchError((err: Response) => {
+          return this.handleError(err);
+        })
+      );
   }
-  // public handleError(error: any) {
-  //   this.router.navigate(['/err']);
-  //   return observableThrowError(error);
-  // }
+  public handleError(error: any) {
+    this.router.navigate(['/err']);
+    return observableThrowError(error);
+  }
 }

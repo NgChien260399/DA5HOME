@@ -1,63 +1,112 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-    
-<!-- Mirrored from live.hasthemes.com/html/5/rozer-preview/rozer/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Sep 2020 16:59:01 GMT -->
+<!doctype html>
+<html lang="en">
 <head>
-        <base href="/">
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>GEARVN</title>
-        <meta name="robots" content="noindex, follow" />
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <!-- Favicon -->
-        <link rel="icon" href="//theme.hstatic.net/1000026716/1000440777/14/favicon.png?v=11736" type="image/x-icon" />
-      <link rel="shortcut icon" href="//theme.hstatic.net/1000026716/1000440777/14/favicon.png?v=11736" type="image/x-icon" />
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800&amp;display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>GEARVN</title>
+<!-- Favicons Icon -->
+<link rel="icon" href="//theme.hstatic.net/1000026716/1000440777/14/favicon.png?v=11736" type="image/x-icon" />
+<link rel="shortcut icon" href="//theme.hstatic.net/1000026716/1000440777/14/favicon.png?v=11736" type="image/x-icon" />
+<!-- Mobile Specific -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS Style -->
 
-        <!-- CSS
-  ============================================ -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/revslider.css" type="text/css">
+<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="assets/css/owl.theme.css" type="text/css">
+<link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css">
+<!-- Google Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+</head>
+<body class="cms-index-index">
+  <div class="page">
+    <app-root></app-root>
+  </div>
+  
 
-            <!-- Vendor CSS (Bootstrap & Icon Font) -->
-         <!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/vendor/ionicons.min.css">
-        <link rel="stylesheet" href="assets/css/vendor/simple-line-icons.css">
-        <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css"> -->
+  <!-- JavaScript --> 
+<script type="text/javascript" src="assets/js/jquery.min.js"></script> 
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+ 
+<script type="text/javascript" src="assets/js/common.js"></script> 
+<script type="text/javascript" src="assets/js/revslider.js"></script> 
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script> 
+<script type='text/javascript'>
+jQuery(document).ready(function(){
+jQuery('#rev_slider_4').show().revolution({
+dottedOverlay: 'none',
+delay: 5000,
+startwidth: 1170,
+startheight: 580,
 
-            <!-- Plugins CSS (All Plugins Files) -->
-         <!-- <link rel="stylesheet" href="assets/css/plugins/animate.css">
-        <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css">
-        <link rel="stylesheet" href="assets/css/plugins/swiper.css">  -->
+hideThumbs: 200,
+thumbWidth: 200,
+thumbHeight: 50,
+thumbAmount: 2,
 
-        <!-- Use the minified version files listed below for better performance and remove the files listed above -->
-        <link rel="stylesheet" href="assets/css/vendor/vendor.min.css" />
-        <link rel="stylesheet" href="assets/css/plugins/plugins.min.css" />
-        <link rel="stylesheet" href="assets/css/style.min.css">
+navigationType: 'thumb',
+navigationArrows: 'solo',
+navigationStyle: 'round',
 
-        <!-- Main Style CSS -->
-    </head>
+touchenabled: 'on',
+onHoverStop: 'on',
 
-    <body>
-      <app-root></app-root>
+swipe_velocity: 0.7,
+swipe_min_touches: 1,
+swipe_max_touches: 1,
+drag_block_vertical: false,
 
+spinner: 'spinner0',
+keyboardNavigation: 'off',
 
+navigationHAlign: 'center',
+navigationVAlign: 'bottom',
+navigationHOffset: 0,
+navigationVOffset: 20,
 
-            <!-- Vendors JS -->
-        <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
-        <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/vendor/jquery-migrate-3.1.0.min.js"></script>
-        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+soloArrowLeftHalign: 'left',
+soloArrowLeftValign: 'center',
+soloArrowLeftHOffset: 20,
+soloArrowLeftVOffset: 0,
 
-            <!-- Plugins JS -->
-         <script src="assets/js/plugins/jquery-ui.min.js"></script>
-        <script src="assets/js/plugins/swiper.min.js"></script>
-        <script src="assets/js/plugins/countdown.js"></script>
-        <script src="assets/js/plugins/scrollup.js"></script>
-        <script src="assets/js/plugins/elevateZoom.js"></script>
+soloArrowRightHalign: 'right',
+soloArrowRightValign: 'center',
+soloArrowRightHOffset: 20,
+soloArrowRightVOffset: 0,
 
+shadow: 0,
+fullWidth: 'on',
+fullScreen: 'off',
 
-        <script src="assets/js/main.js"></script>
-    </body>
+stopLoop: 'off',
+stopAfterLoops: -1,
+stopAtSlide: -1,
 
+shuffle: 'off',
+
+autoHeight: 'off',
+forceFullWidth: 'on',
+fullScreenAlignForce: 'off',
+minFullScreenHeight: 0,
+hideNavDelayOnMobile: 1500,
+
+hideThumbsOnMobile: 'off',
+hideBulletsOnMobile: 'off',
+hideArrowsOnMobile: 'off',
+hideThumbsUnderResolution: 0,
+
+hideSliderAtLimit: 0,
+hideCaptionAtLimit: 0,
+hideAllCaptionAtLilmit: 0,
+startWithSlide: 0,
+fullScreenOffsetContainer: ''
+});
+});
+</script>
+</body>
 </html>

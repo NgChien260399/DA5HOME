@@ -14,12 +14,12 @@ export class HeaderComponent extends BaseComponent implements OnInit {
     super(injector);
   }
   ngOnInit(): void {
-    this._api.get('/api/category/get-category').takeUntil(this.unsubscribe).subscribe(res => {
-      this.menus = res;
-    }); 
-    this._cart.items.subscribe((res) => {
-      this.total = res? res.length:0;
-    });
+    // this._api.get('/api/category/get-category').takeUntil(this.unsubscribe).subscribe(res => {
+    //   this.menus = res;
+    // }); 
+    // this._cart.items.subscribe((res) => {
+    //   this.total = res? res.length:0;
+    // });
   }
 
 }

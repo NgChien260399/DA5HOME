@@ -1,5 +1,6 @@
-import { Component, Inject, Injector, OnInit } from '@angular/core';
-import { BaseComponent } from 'src/app/lib/base-component';
+import { Component, Injector, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs/operators';
+import { BaseComponent } from '../../lib/base-component';
 
 @Component({
   selector: 'app-detail',
@@ -7,24 +8,22 @@ import { BaseComponent } from 'src/app/lib/base-component';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent extends BaseComponent implements OnInit {
+  item:any;
+
   constructor(injector: Injector) {
     super(injector);
   }
-  product: any;
   ngOnInit(): void {
-    (this.product = {}),
-      this._route.params.subscribe((params) => {
-        let id = params['id'];
-        this._api
-          .get('api/product/get-by-id/' + id)
-          .takeUntil(this.unsubscribe)
-          .subscribe((res) => {
-            this.product = res;
-            setTimeout(() => {
-              this.loadScripts();
-            });
-          });
-      });
+    this.item = {};
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('/api/product/get-by-id/'+id).pipe(takeUntil(this.unsubscribe)).subscribe((res: any) => {
+        this.item = res;
+        setTimeout(() => {
+          this.loadScripts();
+        });
+      }); 
+    });
   }
   addToCart(it) {
     this._cart.addToCart(it);
