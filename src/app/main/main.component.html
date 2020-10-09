@@ -1,14 +1,14 @@
 <section class="recommend container">
   <div class="new-pro-slider">
     <div class="new_title center">
-      <h2>FEATURED PRODUCTS</h2>
+      <h2>Sản phẩm mới</h2>
     </div>
       <ul class="products-grid">
         <ng-container *ngFor="let new of list_item_new">
           <li class="item col-lg-2 col-md-3 col-sm-6 col-xs-6">
             <div class="col-item">
               <div class="sale-label sale-top-right">Sale</div>
-              <div class="images-container"> <a class="product-image" title="Sample Product" href="product_detail.html"> <img src="assets/product/{{new.product_image}}" class="img-responsive" alt="a" /> </a>
+              <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',new.product_id]"> <img src="assets/product/{{new.product_image}}" class="img-responsive" alt="a" /> </a>
                 <div class="actions">
                   <div class="actions-inner">
                     <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
@@ -22,7 +22,7 @@
               </div>
               <div class="info">
                 <div class="info-inner">
-                  <div class="item-title"> <a title=" Sample Product" href="product_detail.html"> {{new.product_name}} </a> </div>
+                  <div class="item-title"> <a title=" Sample Product" [routerLink]="['/product/detail',new.product_id]"> {{new.product_name}} </a> </div>
                   <!--item-title-->
                   <div class="item-content">
                     <div class="ratings">
@@ -32,7 +32,6 @@
                     </div>
                     <div class="price-box">
                       <p class="special-price"> <span class="price"> {{new.product_price}} </span> </p>
-                      <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
                     </div>
                   </div>
                   <!--item-content--> 
@@ -54,14 +53,13 @@
   <br>
   <div class="new-pro-slider" style="float:left;margin-top:50px">
       <div class="new_title center">
-        <h2>FEATURED PRODUCTS</h2>
+        <h2>Sản Phẩm</h2>
       </div>
         <ul class="products-grid">
           <ng-container *ngFor="let product of list_item">
             <li class="item col-lg-3 col-md-3 col-sm-6 col-xs-6">
               <div class="col-item">
-                <div class="sale-label sale-top-right">Sale</div>
-                <div class="images-container"> <a class="product-image" title="Sample Product" href="product_detail.html"> <img src="assets/product/{{product.product_image}}" class="img-responsive" alt="a" /> </a>
+                <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',product.product_id]"> <img src="assets/product/{{product.product_image}}" class="img-responsive" alt="a" /> </a>
                   <div class="actions">
                     <div class="actions-inner">
                       <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
@@ -71,11 +69,11 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" href="quick_view.html"><span><span>Quick View</span></span></a> </div>
+                  <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',product.product_id]"><span><span>Quick View</span></span></a> </div>
                 </div>
                 <div class="info">
                   <div class="info-inner">
-                    <div class="item-title"> <a title=" Sample Product" href="product_detail.html"> {{product.product_name}} </a> </div>
+                    <div class="item-title"> <a title=" Sample Product" [routerLink]="['/product/detail',product.product_id]"> {{product.product_name}} </a> </div>
                     <!--item-title-->
                     <div class="item-content">
                       <div class="ratings">
@@ -85,7 +83,6 @@
                       </div>
                       <div class="price-box">
                         <p class="special-price"> <span class="price"> {{product.product_price}} </span> </p>
-                        <p class="old-price"> <span class="price-sep">-</span> <span class="price"> $50.00 </span> </p>
                       </div>
                     </div>
                     <!--item-content--> 

@@ -131,20 +131,32 @@
         <ul id="nav" class="hidden-xs">
           <li class="level0 parent drop-menu"><a  routerLink="/home"><span>Trang chủ</span> </a>
           </li>
-          <li class="level0 parent drop-menu"><a routerLink="/list"><span>Sản Phẩm</span> </a>
+
+          <ng-container *ngFor="let mn of menus">
+          <li class="level0 parent drop-menu" *ngIf="mn.children !=null"><a routerLink="/list"><span>{{mn.category_name}}</span> </a>
             <ul class="level1">
-              <li class="level1 first"><a href=""><span>cpu</span></a></li>
-              <li class="level1 first"><a href=""><span>cpu</span></a></li>
-              <li class="level1 first"><a href=""><span>cpu</span></a></li>
+              <ng-container *ngFor="let m of mn.children">
+              <li class="level1 first"><a [routerLink] = "['/product/list',m.category_name]"><span>{{m.category_name}}</span></a></li>
+            </ng-container>
             </ul>
           </li>
-          <li class="level0 parent drop-menu"><a routerLink="/list"><span>Thương Hiệu</span> </a>
+        </ng-container>
+        <ng-container *ngFor="let mn of menus1">
+          <li class="level0 parent drop-menu" *ngIf="mn.children !=null"><a routerLink=""><span>{{mn.brand_name}}</span> </a>
+            <ul class="level1" style="height: 470px;width: 800px">
+              <ng-container *ngFor="let m of mn.children">
+              <li class="level1 first"><a [routerLink] = "['/product/list',m.brand_name]"><span>{{m.brand_name}}</span></a></li>
+            </ng-container>
+            </ul>
+          </li>
+        </ng-container>
+          <!-- <li class="level0 parent drop-menu"><a routerLink="/list"><span>Thương Hiệu</span> </a>
             <ul class="level1" style="height: 470px;width: 800px">
               <li style="float: left;width: 150px" class=""><a href=""><span>dell</span></a></li>
               <li style="float: left;width: 150px" class=""><a href=""><span>asus</span></a></li>
               <li style="float: left;width: 150px" class=""><a href=""><span>acer</span></a></li>
             </ul>
-          </li>
+          </li> -->
           
           <li class="level0 parent drop-menu"><a href="blog.html"><span>Tổng Đài</span> </a>
           </li>
@@ -218,4 +230,5 @@
     </div>
   </div>
   <!-- end header service --> 
+  
 

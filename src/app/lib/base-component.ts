@@ -16,7 +16,7 @@ export class BaseComponent {
     this._route = injector.get(ActivatedRoute);
   }
   public loadScripts() {
-    this.renderExternalScript('asset/js/main.js').onload = () => {};
+    this.renderExternalScript('assets/js/common.js').onload = () => {};
   }
   public renderExternalScript(src: string): HTMLScriptElement {
     const script = document.createElement('script');
