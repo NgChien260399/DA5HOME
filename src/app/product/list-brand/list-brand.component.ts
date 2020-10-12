@@ -12,6 +12,7 @@ export class ListBrandComponent extends BaseComponent implements OnInit {
   pageSize: any;
   totalItems:any;
   brand_id:any;
+  menus1:any;
 
   constructor(injector: Injector) {
     super(injector);
@@ -31,6 +32,9 @@ export class ListBrandComponent extends BaseComponent implements OnInit {
         this.totalItems = res.totalItems;
         }, err => { });       
    });
+   this._api.get('/api/brand/get-brand').takeUntil(this.unsubscribe).subscribe(res => {
+    this.menus1 = res;
+  });
   }
 
   loadPage(page) { 

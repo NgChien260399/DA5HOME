@@ -12,6 +12,7 @@ export class ListComponent extends BaseComponent implements OnInit {
   pageSize: any;
   totalItems:any;
   category_id:any;
+  menus:any;
 
   constructor(injector: Injector) {
     super(injector);
@@ -31,6 +32,11 @@ export class ListComponent extends BaseComponent implements OnInit {
         this.totalItems = res.totalItems;
         }, err => { });       
    });
+
+   this._api.get('/api/category/get-category').takeUntil(this.unsubscribe).subscribe(res => {
+    this.menus = res;
+  });
+  
   }
 
   loadPage(page) { 
@@ -49,5 +55,6 @@ export class ListComponent extends BaseComponent implements OnInit {
     this._cart.addToCart(it);
     alert('Thêm thành công!'); 
   }
-
+  
+  
 }

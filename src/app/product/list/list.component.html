@@ -3,7 +3,7 @@
       <div class="row">
         <section class="col-sm-9 col-xs-12 col-sm-push-3 wow">
           <div class="category-title">
-            <h1>Tên danh mục ở đây</h1>
+            <h1>Danh mục / Sản phẩm</h1>
           </div>
           <div class="category-products">
             <ul id="products-list" class="products-list">
@@ -18,8 +18,7 @@
                           <div class="product-shop">
                             <h2 class="product-name"><a title=" Sample Product" href=""> {{item.product_name}} </a></h2>
                             <div class="price-box">
-                              <p class="old-price"> <span class="price-label"></span> <span id="old-price-212" class="price"> $442.99 </span> </p>
-                              <p class="special-price"> <span class="price-label"></span> <span id="product-price-212" class="price"> $222.99 </span> </p>
+                              <p class="special-price"> <span class="price-label"></span> <span id="product-price-212" class="price"> {{item.product_price}} </span> </p>
                             </div>
                             <div class="ratings">
                               <div class="rating-box">
@@ -28,11 +27,7 @@
                               <p class="rating-links"> <a href="#">1 Review(s)</a> <span class="separator">|</span> <a href="#review-form">Add Your Review</a> </p>
                             </div>
                             <div class="desc std">
-                              <p>Sed volutpat ac massa eget 
-                                lacinia.  
-                                Aenean volutpat lacus at dolor blandit </p>
-                              <p>Sed sed interdum diam. Donec sit ametenim tempor, dapibus nunc eu, 
-                                tincidunt mi. Vivamus dictum nec... <a class="link-learn" title="" href="#">Learn More</a> </p>
+                              <p>{{item.product_desc}}</p>
                             </div>
                             <div class="actions">
                               <button class="button btn-cart ajx-cart" title="Add to Cart" type="button"><span>Add to Cart</span></button>
@@ -49,24 +44,20 @@
         </section>
         <aside class="col-left sidebar col-sm-3 col-xs-12 col-sm-pull-9 wow">
           <div class="side-nav-categories">
-            <div class="block-title"> Categories </div>
+            <ng-container *ngFor="let mn of menus">
+            <div class="block-title" *ngIf="mn.children !=null"> {{mn.category_name}} </div>
+          
             <!--block-title--> 
             <!-- BEGIN BOX-CATEGORY -->
             <div class="box-content box-category">
               <ul>
-                <li> <a class="active" href="#/women.html">Women</a></li>
-                <!--level 0-->
-                <li> <a href="#/men.html">Men</a> </li>
-                <!--level 0-->
-                <li> <a href="#.html">Electronics</a></li>
-                <!--level 0-->
-                <li> <a href="#/digital.html">Digital</a> </li>
-                <!--level 0-->
-                <li class="last"> <a href="#/fashion.html">Fashion</a> </li>
-                <!--level 0-->
+                <ng-container *ngFor="let m of mn.children">
+                <li> <a class="active" [routerLink] = "['/product/list',m.category_id]">{{m.category_name}}</a></li>
+              </ng-container>
               </ul>
             </div>
-            <!--box-content box-category--> 
+            <!--box-content box-category-->
+          </ng-container>
           </div>
           
         </aside>
