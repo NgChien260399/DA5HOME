@@ -7,7 +7,7 @@
           </div>
           <div class="category-products">
             <ul id="products-list" class="products-list">
-                <ng-container *ngFor="let item of list">
+                <ng-container *ngFor="let item of list_brand">
                     <li class="item odd">
                         <div class="col-item">
                           <div class="product_image">
@@ -18,8 +18,7 @@
                           <div class="product-shop">
                             <h2 class="product-name"><a title=" Sample Product" href=""> {{item.product_name}} </a></h2>
                             <div class="price-box">
-                              <p class="old-price"> <span class="price-label"></span> <span id="old-price-212" class="price"> $442.99 </span> </p>
-                              <p class="special-price"> <span class="price-label"></span> <span id="product-price-212" class="price"> $222.99 </span> </p>
+                              <p class="old-price"> <span class="price-label"></span> <span id="old-price-212" class="price"> {{item.product_price}} </span> </p>
                             </div>
                             <div class="ratings">
                               <div class="rating-box">
