@@ -11,7 +11,7 @@
               <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',new.product_id]"> <img src="assets/product/{{new.product_image}}" class="img-responsive" alt="a" /> </a>
                 <div class="actions">
                   <div class="actions-inner">
-                    <button type="button" title="Add to Cart" class="button btn-cart" (click)="addToCart(new)"><span>Add to Cart</span></button>
+                    <button type="button" style="width: 100%;" title="Add to Cart" class="button btn-cart" (click)="addToCart(new)"><span>Add to Cart</span></button>
                   </div>
                 </div>
                 <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',new.product_id]"><span><span>Quick View</span></span></a> </div>
@@ -27,7 +27,7 @@
                       </div>
                     </div>
                     <div class="price-box">
-                      <p class="special-price"> <span class="price"> {{new.product_price}} </span> </p>
+                      <p class="special-price"> <span class="price"> {{new.product_price | currency:"VND" }} </span> </p>
                     </div>
                   </div>
                   <!--item-content--> 
@@ -57,8 +57,14 @@
               <div class="col-item">
                 <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',product.product_id]"> <img src="assets/product/{{product.product_image}}" class="img-responsive" alt="a" /> </a>
                   <div class="actions">
-                    <div class="actions-inner">
-                      <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                    <div class="actions">
+                      <div class="actions-inner">
+                        <button type="button" class="button btn-cart" (click)="addToCart(product)"><span>Add to Cart</span></button>
+                        <ul class="add-to-links">
+                          <li><a (click)="addToCart(product)" title="Add to cart" class="link-wishlist"><span>Add to cart</span></a></li>
+                          <li><a (click)="addToCart(product)" title="Add to cart" class="link-compare "><span>Add to cart</span></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',product.product_id]"><span><span>Quick View</span></span></a> </div>
@@ -74,7 +80,7 @@
                         </div>
                       </div>
                       <div class="price-box">
-                        <p class="special-price"> <span class="price"> {{product.product_price}} </span> </p>
+                        <p class="special-price"> <span class="price"> {{product.product_price | currency:"VND"}} </span> </p>
                       </div>
                     </div>
                     <!--item-content--> 
