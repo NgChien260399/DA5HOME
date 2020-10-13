@@ -11,7 +11,7 @@
               <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',new.product_id]"> <img src="assets/product/{{new.product_image}}" class="img-responsive" alt="a" /> </a>
                 <div class="actions">
                   <div class="actions-inner">
-                    <button type="button" title="Add to Cart" class="button btn-cart"><span>Add to Cart</span></button>
+                    <button type="button" title="Add to Cart" class="button btn-cart" (click)="addToCart(new)"><span>Add to Cart</span></button>
                   </div>
                 </div>
                 <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',new.product_id]"><span><span>Quick View</span></span></a> </div>
