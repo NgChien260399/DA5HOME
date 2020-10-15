@@ -31,7 +31,7 @@
                       <td class="image"><a><img src="assets/product/{{c.product_image}}" width="50" alt="" /></a></td>
                       <td><h2 class="product-name"> <p><a style="color: black">{{c.product_name}}</a></p> </h2></td>
                       
-                      <td class="a-right"><span class="cart-price"> <span class="price">{{c.product_price}}</span> </span></td>
+                      <td class="a-right"><span class="cart-price"> <span class="price">{{c.product_price | currency:"VND"}}</span> </span></td>
                       <td class="a-center movewishlist">
                       	
                       	<div class="cart_quantity_button">
@@ -46,7 +46,7 @@
                       </td>
                       <td class="a-right movewishlist"><span class="cart-price"> 
                         <span class="price">
-                         </span>{{ c.money }}</span></td>
+                         </span>{{ c.money | currency:"VND"}}</span></td>
                       <td class="a-center last"><a class="button remove-item" title="Remove item" (click)="_cart.deleteItem(c.product_id)"></a></td>
                     </tr>
                   </tbody>
@@ -65,13 +65,13 @@
                   <tfoot>
                     <tr>
                       <td colspan="1" class="a-left"><strong>Thành tiền</strong></td>
-                      <td class="a-right"><strong><span class="price"><span>1000 đ</span></span></strong></td>
+                      <td class="a-right"><strong><span class="price"><span>{{total | currency:"VND"}}</span></span></strong></td>
                     </tr>
                   </tfoot>
                   <tbody>
                     <tr>
                       <td colspan="1" class="a-left"> Tổng tiền </td>
-                      <td class="a-right"><span class="price"><span>1000 vnđ</span></span></td>
+                      <td class="a-right"><span class="price"><span>{{total | currency:"VND"}}</span></span></td>
                     </tr>
                     <tr>
                       <td colspan="1" class="a-left"> Phí vận chuyển </td>

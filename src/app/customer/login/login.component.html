@@ -1,1 +1,92 @@
-<p>login works!</p>
+<section class="main-container col1-layout">
+    <div class="main container">
+      <div class="account-login">
+        <div >
+          <h2 style="text-align: center;">Đăng nhập hoặc tạo tài khoản</h2>
+        </div>
+        <fieldset class="col2-set">
+          <div class="col-1 new-users"><strong>Khách hàng mới</strong>
+            <div class="content">
+              <p>Bằng cách tạo tài khoản với cửa hàng của chúng tôi, bạn sẽ có thể chuyển qua quy trình thanh toán nhanh hơn, lưu trữ nhiều địa chỉ giao hàng, xem và theo dõi đơn hàng của bạn và hơn thế nữa.</p>
+              <div class="buttons-set">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister(registerForm.value)">
+							<ul class="form-list">
+                <li>
+                  <label for="email">ID<span class="required">*</span></label>
+                  <br>
+                  <input type="text" class="input-text required-entry" formControlName="id">
+                </li>
+                			<li>
+                  			<label for="email">Email<span class="required">*</span></label>
+                  			<br>
+                        <input type="text" class="input-text required-entry" formControlName="email">
+                			</li>
+                			<li>
+                  			<label for="email">Password<span class="required">*</span></label>
+                  			<br>
+                        <input type="password" class="input-text required-entry" formControlName="password">
+                        
+                      </li>
+                      <li>
+                  			<label for="name">Họ và Tên<span class="required">*</span></label>
+                  			<br>
+                        <input type="text" class="input-text required-entry" formControlName="name">
+                        
+                			</li>
+                			<li>
+                  			<label for="phone">Số Điện Thoại<span class="required">*</span></label>
+                  			<br>
+                        <input type="text" class="input-text required-entry" formControlName="phone">
+                        
+                			</li>
+                      <li>
+                  			<label for="phone">Địa Chỉ<span class="required">*</span></label>
+                  			<br>
+                        <input type="text" class="input-text required-entry" formControlName="address">
+                        
+                			</li>      
+                      <p class="required">* Phần bắt buộc</p>
+              				</ul>
+							<button type="submit" class="button login"><span>Đăng ký</span></button>
+							
+						</form>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 registered-users" style="height: 655px"><strong>Đăng nhập</strong>
+            <div class="content">
+              <p>Nếu bạn có tài khoản, vui lòng đăng nhập.</p>
+        
+						<form action="" method="POST">
+							
+              <ul class="form-list">
+                <li>
+                  <label for="email">Email<span class="required">*</span></label>
+                  <br>
+                  <input type="text" class="input-text required-entry" id="email" value="" name="email_account">
+                </li>
+                <li>
+                  <label for="pass">Password <span class="required">*</span></label>
+                  <br>
+                  <input type="password" title="Password" id="pass" class="input-text required-entry validate-password" name="password_account">
+                </li>
+              </ul>
+              <p class="required">* Phần bắt buộc</p>
+              <div class="buttons-set">
+                <button id="send2" name="send" type="submit" class="button login"><span>Đăng nhập</span></button>
+                 </div>
+             </form>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+
+    </div>
+  </section>
+<style type="text/css">
+	h4{
+		color: red;
+	}
+</style>

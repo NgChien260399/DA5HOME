@@ -12,13 +12,13 @@
                         <div class="col-item">
                           <div class="product_image">
                             <div class="images-container"> <a class="product-image" title="Sample Product" href=""> <img src="assets/product/{{item.product_image}}" class="img-responsive" alt="a" /> </a>
-                              <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" href="quick_view.html"><span><span>Quick View</span></span></a> </div>
+                              <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',item.product_id]"><span><span>Quick View</span></span></a> </div>
                             </div>
                           </div>
                           <div class="product-shop">
-                            <h2 class="product-name"><a title=" Sample Product" href=""> {{item.product_name}} </a></h2>
+                            <h2 class="product-name"><a title=" Sample Product" [routerLink]="['/product/detail',item.product_id]"> {{item.product_name}} </a></h2>
                             <div class="price-box">
-                              <p class="old-price"> <span class="price-label"></span> <span id="old-price-212" class="price"> {{item.product_price}} </span> </p>
+                              <p class="special-price"> <span class="price-label"></span> <span id="product-price-212" class="price"> {{item.product_price | currency:"VND"}} </span> </p>
                             </div>
                             <div class="ratings">
                               <div class="rating-box">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="actions">
                               <button class="button btn-cart ajx-cart" title="Add to Cart" type="button" (click)="addToCart(item)"><span>Add to Cart</span></button>
-                              <span class="add-to-links"> <a title="Add to Wishlist" class="button link-wishlist" href="wishlist.html"><span>Add to Wishlist</span></a> <a title="Add to Compare" class="button link-compare" href="compare.html"><span>Add to Compare</span></a> </span> </div>
+                              <span class="add-to-links">  </span> </div>
                           </div>
                         </div>
                       </li>

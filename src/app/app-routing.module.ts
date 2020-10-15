@@ -37,10 +37,7 @@ const routes: Routes = [
      path: 'detail',
      component: DetailComponent,
    },
-   {
-     path: 'login',
-     component: LoginComponent,
-   },
+   
    {
     path: '**',
     component: NotFoundComponent,
