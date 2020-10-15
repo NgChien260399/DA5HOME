@@ -1,1 +1,87 @@
-<p>checkout works!</p>
+<section class="main-container col1-layout">
+    <div class="main container">
+      <div class="account-login">
+        <div >
+          <h2 style="text-align: center;">Vui lòng điền thông tin nhận hàng :</h2>
+        </div>
+        <fieldset class="col2-set">
+          <div class="col-1 new-users"><strong>Thông tin người nhận :</strong>
+            <div class="content">
+              <div class="buttons-set">
+                <form [formGroup]="orderForm" (ngSubmit)="onSubmit(orderForm.value)">
+							<ul class="form-list">
+                			<li>
+                  			<label for="text">Họ và Tên<span class="required">*</span></label>
+                  			<br>
+                  			<input type="text" class="input-text required-entry" formControlName="ho_ten"  required="">
+                			</li>
+                			<li>
+                  			<label for="pass">Địa Chỉ <span class="required">*</span></label>
+                  			<br>
+                  			<input type="text" class="input-text required-entry" formControlName="dia_chi" required="">
+                			</li>
+                            <li>
+                                <label for="pass">Số Điện Thoại <span class="required">*</span></label>
+                                <br>
+                                <input type="text" class="input-text required-entry" formControlName="sdt" required="">
+                              </li>
+                			<p class="required">* Phần bắt buộc</p>
+              				</ul>
+							<button type="submit" class="button login"><span>Gửi</span></button>
+							
+						</form>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 registered-users" style="height: 430px;"><strong>Sản phẩm đặt mua :</strong>
+            <br>
+            <br>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Hình Ảnh</th>
+                        <th scope="col">Tên Sản Phẩm</th>
+                        <th scope="col">Tổng Tiền</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let it of items">
+                        <td> <img src="assets/product/{{it.product_image}}" style="width: 40px;height: 40px;"/></td>
+                        <td>{{it.product_name}} <strong> * {{it.quantity}}</strong></td>
+                        <td> {{it.money}}<td>
+                      </tr>
+                </tbody>
+                
+            </table>
+            <table class="table shopping-cart-table-total" id="shopping-cart-totals-table" style="">
+                <colgroup>
+                <col>
+                <col width="1">
+                </colgroup>
+                <tfoot>
+                  <tr>
+                    <td colspan="1" class="a-left"><strong>Thành tiền</strong></td>
+                    <td class="a-right"><strong><span class="price"><span>{{total | currency:"VND"}}</span></span></strong></td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td colspan="1" class="a-left"> Phí vận chuyển </td>
+                    <td class="a-right"><span class="price"><span>Free</span></span></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+<style type="text/css">
+	h4{
+		color: red;
+	}
+</style>
