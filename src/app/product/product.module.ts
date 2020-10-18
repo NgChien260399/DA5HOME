@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { ListBrandComponent } from './list-brand/list-brand.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
@@ -28,6 +29,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    NgbModule
   ]
 })
 export class ProductModule { }
