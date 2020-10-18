@@ -24,7 +24,7 @@ export class ListBrandComponent extends BaseComponent implements OnInit {
     this.pageSize = 5;
     this._route.params.subscribe(params => {
       this.brand_id = params['id'];
-      this._api.post('/api/product/search1', { 
+      this._api.post('/api/product/search-brand', { 
         page: this.page, 
         pageSize: this.pageSize, 
         brand_id: this.brand_id}).takeUntil(this.unsubscribe).subscribe(res => {
@@ -40,7 +40,7 @@ export class ListBrandComponent extends BaseComponent implements OnInit {
   loadPage(page) { 
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.post('/api/product/search1', { 
+      this._api.post('/api/product/search-brand', { 
         page: page, 
         pageSize: this.pageSize, 
         brand_id: id}).takeUntil(this.unsubscribe).subscribe(res => {

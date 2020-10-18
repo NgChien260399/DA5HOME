@@ -64,3 +64,6 @@
       </div>
     </div>
   </section>
+  <div class="shop_toolbar t_bottom" style="text-align:center;">
+    <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+</div>
