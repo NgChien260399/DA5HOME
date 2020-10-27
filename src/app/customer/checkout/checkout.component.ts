@@ -42,5 +42,8 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
     });
 
   }
+  clearCart() { 
+    this._cart.clearCart();
+  }
 
 }

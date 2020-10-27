@@ -11,38 +11,33 @@
               <div class="buttons-set">
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister(registerForm.value)">
 							<ul class="form-list">
-                <li>
-                  <label for="email">ID<span class="required">*</span></label>
-                  <br>
-                  <input type="text" class="input-text required-entry" formControlName="id">
-                </li>
                 			<li>
                   			<label for="email">Email<span class="required">*</span></label>
                   			<br>
-                        <input type="text" class="input-text required-entry" formControlName="email">
+                        <input type="text" class="input-text required-entry" formControlName="customer_email">
                 			</li>
                 			<li>
                   			<label for="email">Password<span class="required">*</span></label>
                   			<br>
-                        <input type="password" class="input-text required-entry" formControlName="password">
+                        <input type="password" class="input-text required-entry" formControlName="customer_password">
                         
                       </li>
                       <li>
                   			<label for="name">Họ và Tên<span class="required">*</span></label>
                   			<br>
-                        <input type="text" class="input-text required-entry" formControlName="name">
+                        <input type="text" class="input-text required-entry" formControlName="customer_name">
                         
                 			</li>
                 			<li>
                   			<label for="phone">Số Điện Thoại<span class="required">*</span></label>
                   			<br>
-                        <input type="text" class="input-text required-entry" formControlName="phone">
+                        <input type="text" class="input-text required-entry" formControlName="customer_phone">
                         
                 			</li>
                       <li>
                   			<label for="phone">Địa Chỉ<span class="required">*</span></label>
                   			<br>
-                        <input type="text" class="input-text required-entry" formControlName="address">
+                        <input type="text" class="input-text required-entry" formControlName="customer_address">
                         
                 			</li>      
                       <p class="required">* Phần bắt buộc</p>

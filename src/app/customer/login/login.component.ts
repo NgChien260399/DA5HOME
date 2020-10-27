@@ -15,16 +15,15 @@ export class LoginComponent extends BaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.registerForm = new FormGroup({
-      email: new FormControl('', [Validators.required,Validators.email]),
-      password: new FormControl('', [Validators.required,Validators.minLength(8),]),
-      id: new FormControl('', [Validators.required,Validators.nullValidator,]),
-      name: new FormControl('', [Validators.required]),
-      phone: new FormControl('', [Validators.required,Validators.maxLength(10),]),
-      address: new FormControl('', [Validators.required])
+      customer_email: new FormControl('', [Validators.required,Validators.email]),
+      customer_password: new FormControl('', [Validators.required,Validators.minLength(8),]),
+      customer_name: new FormControl('', [Validators.required]),
+      customer_phone: new FormControl('', [Validators.required,Validators.maxLength(10),]),
+      customer_address: new FormControl('', [Validators.required])
     });
     this.loginForm = new FormGroup({
-      username: new FormControl('', Validators.required),
-      password: new FormControl('', [
+      customer_username: new FormControl('', Validators.required),
+      customer_password: new FormControl('', [
         Validators.required,
         Validators.minLength(8),
       ]),
@@ -36,8 +35,8 @@ export class LoginComponent extends BaseComponent implements OnInit {
   }
   onSubmitRegister(value: any) { 
 
-    this._api.post('/api/Customer/create-customer', {customer_email:value.email, customer_password:value.password, customer_id:value.id, customer_name:value.name, customer_phone:value.phone,customer_address:value.address} ).takeUntil(this.unsubscribe).subscribe(res => {
-     alert('Tạo thành công');
+    this._api.post('/api/customer/create-customer', {customer_email:value.customer_email, customer_password:value.customer_password, customer_name:value.customer_name, customer_phone:value.customer_phone,customer_address:value.customer_address} ).takeUntil(this.unsubscribe).subscribe(res => {
+     alert('Đăng kí thành công');
       }, err => { });      
 
   }

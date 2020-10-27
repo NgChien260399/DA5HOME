@@ -98,7 +98,9 @@
                       
         </ul>
   </div>
-  <div style="width: 100%;float: left;margin-left: 40%">1 2 3</div>
+  <div>
+    <ngb-pagination style="float: right;" [collectionSize]="list_item[0].total" [pageSize]="size" [(page)]="index" [maxSize]="8" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+         </div>
 </section>
 
 
