@@ -24,12 +24,12 @@
     </div>
     <div class="header container">
       <div class="row">
-        <div class="col-lg-2 col-sm-3 col-md-2 col-xs-12"> 
+        <div class="col-lg-4 col-sm-3 col-md-2 col-xs-12"> 
           <!-- Header Logo --> 
           <a class="logo" title="Magento Commerce" routerLink="/home"><img alt="Magento Commerce" src="assets/images/gearvn-logo.png"></a> 
           <!-- End Header Logo --> 
         </div>
-        <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12"> 
+        <div class="col-lg-4 col-sm-4 col-md-6 col-xs-12"> 
           <!-- Search-col -->
           <div class="search-box" style="width: 365px;">
             <form action="" id="search_mini_form" name="Categories">
@@ -40,11 +40,11 @@
           <!-- End Search-col --> 
         </div>
         <!-- Top Cart -->
-        <div class="col-lg-3 col-sm-5 col-md-4 col-xs-12">
+        <div class="col-lg-4 col-sm-5 col-md-4 col-xs-12">
           <div class="top-cart-contain">
             <div class="mini-cart">
               <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a routerLink="/customer/cart"> <i class="icon-cart"></i>
-                <div class="cart-box"><span class="title">My Cart</span><span id="cart-total"> {{total}} </span></div>
+                <div class="cart-box"><span class="title">Giỏ hàng</span><span id="cart-total"> {{total}} </span></div>
                 </a></div>
             </div>
             <div id="ajaxconfig_info" style="display:none"> <a href="#/"></a>
@@ -83,7 +83,7 @@
           <li class="level0 parent drop-menu" *ngIf="mn.children !=null"><a routerLink=""><span>{{mn.brand_name}}</span> </a>
             <ul class="level1" style="height: 470px;width: 800px;">
               <ng-container *ngFor="let m of mn.children">
-              <li class="level1 first" style="display: inline-block;"><a [routerLink] = "['/product/list-brand',m.brand_id]"><span>{{m.brand_name}}</span></a></li>
+              <li style="float: left;width: 150px" class="level1 first"><a [routerLink] = "['/product/list-brand',m.brand_id]"><span>{{m.brand_name}}</span></a></li>
             </ng-container>
             </ul>
           </li>
