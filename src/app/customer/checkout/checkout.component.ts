@@ -10,7 +10,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CheckoutComponent extends BaseComponent implements OnInit {
   items:any;
   total:any;
-  order_total:any;
   public orderForm: FormGroup;
   constructor(injector: Injector) { 
     super(injector);
@@ -41,9 +40,6 @@ export class CheckoutComponent extends BaseComponent implements OnInit {
       }
     });
 
-  }
-  clearCart() { 
-    this._cart.clearCart();
   }
 
 }

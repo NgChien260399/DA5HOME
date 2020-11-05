@@ -69,7 +69,55 @@
 
             </div>
           </div>
+          <div class="new-pro-slider" style="float:left;margin-top:50px">
+            <div class="new_title center">
+              <h2>Sản Phẩm Tương Tự</h2>
+            </div>
+              <ul class="products-grid">
+      
+                  <ng-container *ngFor="let item of tuongtu ">
+                  <li class="item col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                    <div class="col-item">
+                      <div class="images-container"> <a class="product-image" title="Sample Product" [routerLink]="['/product/detail',item.product_id]"> <img src="assets/product/{{item.product_image}}" class="img-responsive" alt="a" /> </a>
+                        <div class="actions">
+                          <div class="actions">
+                            <div class="actions-inner">
+                              <button type="button" class="button btn-cart" (click)="addToCart(item)"><span>Add to Cart</span></button>
+      
+                            </div>
+                          </div>
+                        </div>
+                        <div class="qv-button-container"> <a class="qv-e-button btn-quickview-1" [routerLink]="['/product/detail',item.product_id]"><span><span>Quick View</span></span></a> </div>
+                      </div>
+                      <div class="info">
+                        <div class="info-inner">
+                          <div class="item-title"> <a title=" Sample Product" [routerLink]="['/product/detail',item.product_id]"> {{item.product_name}} </a> </div>
+                          <!--item-title-->
+                          <div class="item-content">
+      
+                            <div class="price-box">
+                              <p class="special-price"> <span class="price"> {{item.product_price | currency:"VND"}} </span> </p>
+                            </div>
+                          </div>
+                          <!-- item-content -->
+                        </div>
+                        <!-- info-inner -->
+      
+                        <!--actions-->
+      
+                        <div class="clearfix"> </div>
+                      </div>
+                    </div>
+                  </li>
+                </ng-container>
+      
+      
+              </ul>
+              <div class="owl-controls clickable"><div class="owl-buttons"><div class="owl-prev"><a class="flex-prev"></a></div><div class="owl-next"><a class="flex-next"></a></div></div></div>
+        </div>
         </div>
       </div>
     </div>
+    
   </section>
+  

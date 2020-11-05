@@ -5,33 +5,16 @@
         <div class="row"> 
           <!-- Header Language -->
           <div class="col-xs-6">
-            <div class="dropdown block-language-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-language" href="#"> <img src="assets/images/english.png" alt="language"> English <span class="caret"></span> </a>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="assets/images/english.png" alt="language"> English </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="assets/images/francais.png" alt="language"> French </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><img src="assets/images/german.png" alt="language"> German </a></li>
-              </ul>
-            </div>
-            <!-- End Header Language --> 
-            <!-- Header Currency -->
-            <div class="dropdown block-currency-wrapper"> <a role="button" data-toggle="dropdown" data-target="#" class="block-currency" href="#"> USD <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> $ - Dollar </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> £ - Pound </a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#"> € - Euro </a></li>
-              </ul>
-            </div>
             <!-- End Header Currency -->
-            <div class="welcome-msg hidden-xs"> Default welcome msg! </div>
+            
+            <marquee behavior="" direction=""><div class="welcome-msg hidden-xs" style="color:red;"> HCM: 78-80-82 HOÀNG HOA THÁM, Q.TÂN BÌNH | HN: 37 NGÕ 121 THÁI HÀ, Q.ĐỐNG ĐA </div></marquee>
           </div>
           <div class="col-xs-6"> 
             <!-- Header Top Links -->
             <div class="toplinks">
               <div class="links">
-                <div class="myaccount"><a title="My Account" ><span class="hidden-xs">My Account</span></a></div>
-                <div class="wishlist"><a title="My Wishlist" href="wishlist.html"><span class="hidden-xs">Wishlist</span></a></div>
-                <div class="check"><a title="Checkout" routerLink="/customer/checkout"><span class="hidden-xs">Checkout</span></a></div>
-                <div class="phone hidden-xs">1 800 123 1234</div>
+                <div class=""><i class='fas fa-envelope'></i>Gmail: abulick113@gmail.com</div>
+                <div style="margin-left: 10px" class=""><i class='fas fa-phone-square-alt'></i>| Liên hệ: 036 249 9454</div>
               </div>
             </div>
             <!-- End Header Top Links --> 
@@ -48,26 +31,10 @@
         </div>
         <div class="col-lg-7 col-sm-4 col-md-6 col-xs-12"> 
           <!-- Search-col -->
-          <div class="search-box">
-            <form action="http://htmldemo.magikcommerce.com/ecommerce/inspire-html-template/jewellery/cat" method="POST" id="search_mini_form" name="Categories">
-              <select name="category_id" class="cate-dropdown hidden-xs">
-                <option value="0">All Categories</option>
-                <option value="36">Camera</option>
-                <option value="37">Electronics</option>
-                <option value="42">&nbsp;&nbsp;&nbsp;Cell Phones</option>
-                <option value="43">&nbsp;&nbsp;&nbsp;Cameras</option>
-                <option value="44">&nbsp;&nbsp;&nbsp;Laptops</option>
-                <option value="45">&nbsp;&nbsp;&nbsp;Hard Drives</option>
-                <option value="46">&nbsp;&nbsp;&nbsp;Monitors</option>
-                <option value="47">&nbsp;&nbsp;&nbsp;Mouse</option>
-                <option value="48">&nbsp;&nbsp;&nbsp;Digital Cameras</option>
-                <option value="38">Desktops</option>
-                <option value="39">Computer Parts</option>
-                <option value="40">Televisions</option>
-                <option value="41">Featured</option>
-              </select>
-              <input type="text" placeholder="Search here..." value="" maxlength="70" class="" name="search" id="search">
-              <button id="submit-button" class="search-btn-bg"><span>Search</span></button>
+          <div class="search-box" style="width: 365px;">
+            <form action="" id="search_mini_form" name="Categories">
+              <input style="width: 250px" type="text" value="" maxlength="70" class="" name="keywords_submit" placeholder="Tìm kiếm" id="search">
+              <input type="submit" id="submit-button" name="search_items" value="Tìm Kiếm" class="search-btn-bg">
             </form>
           </div>
           <!-- End Search-col --> 
@@ -87,9 +54,8 @@
               <input class="title_shopping_cart" value="Go to shopping cart" type="hidden">
             </div>
           </div>
-          <div class="signup"><a title="Login" href="login.html"><span>Sign up Now</span></a></div>
           <span class="or"> | </span>
-          <div class="login"><a title="Login" routerLink="/customer/login"><span>Log In</span></a></div>
+          <div class="login"><a title="Login" routerLink="/customer/login"><span>Đăng nhập</span></a></div>
         </div>
         <!-- End Top Cart --> 
       </div>
@@ -145,27 +111,25 @@
       <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container' >
         <div id='rev_slider_4' class='rev_slider fullwidthabanner'>
           <ul>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='10' data-thumb='../assets/images/slide-img1.jpg'>
-                <img src="../assets/images/slide-img1.jpg" data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='10' data-thumb='../assets/slider/1.png'>
+                <img src="../assets/slider/1.png" data-bgposition='left top' data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='10' data-thumb='../assets/images/slide-img2.jpg' class="black-text">
-                <img src='../assets/images/slide-img2.jpg'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='10' data-thumb='../assets/slider/2.png' class="black-text">
+                <img src='../assets/slider/2.png'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <!-- <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='{{asset('public/frontend/images/6.png')}}' class="black-text">
-                <img src='{{asset('public/frontend/images/6.png')}}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='../assets/slider/3.png' class="black-text">
+                <img src='../assets/slider/3.png'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='{{asset('public/frontend/images/3.jpg')}}' class="black-text">
-                <img src='{{asset('public/frontend/images/3.jpg')}}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='../assets/slider/4.jpg' class="black-text">
+                <img src='../assets/slider/4.jpg'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='{{asset('public/frontend/images/4.jpg')}}' class="black-text">
-                <img src='{{asset('public/frontend/images/4.jpg')}}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='../assets/slider/5.jpg' class="black-text">
+                <img src='../assets/slider/5.jpg'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='{{asset('public/frontend/images/7.jpg')}}' class="black-text">
-                <img src='{{asset('public/frontend/images/7.jpg')}}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
+            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='../assets/slider/6.png' class="black-text">
+                <img src='../assets/slider/6.png'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
             </li>
-            <li data-transition='random' data-slotamount='7' data-masterspeed='200' data-thumb='{{asset('public/frontend/images/7.jpg')}}' class="black-text">
-                <img src='{{asset('public/frontend/images/8.jpg')}}'  data-bgposition='left top'  data-bgfit='cover' data-bgrepeat='no-repeat' alt="banner"/>
-            </li> -->
+            
 
           </ul>
           <div class="tp-bannertimer"></div>
